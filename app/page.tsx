@@ -801,7 +801,7 @@ function NotCaptured() {
           <div key={type} className={`border-l-4 rounded-r-lg p-5 ${groupColors[type]}`}>
             <p className="text-xs font-semibold tracking-wide uppercase mb-3">{groupLabels[type]}</p>
             <div className="space-y-3">
-              {items.map((item, i) => (
+              {(items as any[]).map((item: any, i: number) => (
                 <div key={i} className="bg-white rounded p-4 border border-slate-200">
                   <p className="font-semibold text-slate-900 text-sm mb-1">{item.title}</p>
                   <p className="text-sm text-slate-700 leading-relaxed mb-2">{item.desc}</p>
