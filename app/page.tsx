@@ -179,7 +179,7 @@ function MetricCard({ label, value, sublabel, accent = "slate" }) {
   );
 }
 
-function CustomTooltip({ active, payload, label, formatter }: any) {
+function CustomTooltip({ active, payload, label, formatter }: { active?: any; payload?: any; label?: any; formatter?: any }) {
   if (!active || !payload || !payload.length) return null;
   return (
     <div className="bg-white border border-slate-300 rounded-md shadow-md px-3 py-2 text-xs">
